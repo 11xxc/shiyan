@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 鑫磁科技</title>
+    <link rel="stylesheet" href="about.css">
+ 
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7d1796d873b15a598799efb5bd8be3c.jpg-Fv3r6ZGUYhihVqmxT2v3SSBReCYYDm.jpeg" alt="鑫磁科技 Logo">
+                <span class="logo-text">鑫磁科技</span>
+            </a>
+            <div class="nav-links">
+                <a href="homepage.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="products.html">产品展示</a>
+                <a href="#">服务</a>
+                <a href="#">新闻</a>
+                <a href="contact.html">联系我们</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>关于鑫磁科技</h1>
+                <p>诚铸品牌，德报社会</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="company-intro">
+                    <h2>企业简介</h2>
+                    <p>鑫磁科技有限公司起步于2003年，是一家集磁性材料研发、生产、加工、销售、服务为一体的高科技新材料企业，主要生产各种型号的磁铁、磁片，软磁带材及其延伸产品。产品广泛应用于电子电力、仪器仪表、医疗器械、家用电器，通讯设备、新能源汽车、国家电网、漏保开关、光伏产业等领域。</p>
+                </div>
+
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>研发中心</h3>
+                        <p>公司成立研发中心，技术和管理团队人员，均有数十年以上的行业经验，有丰富的理论和实践经验。研发中心团队积极创新，在设备和产品方面已拥有十多项专利。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>生产能力</h3>
+                        <p>生产适销对路产品，满足社会需要。实现企业经营决策和生产目标的任务。使企业的人力资源和物力资源得到充分最有效的利用。现带材年产可达10000吨、铁芯日产30W只、互感器日产20W只。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>加工设备</h3>
+                        <p>我司拥有国内外生产加工设备3000余台。满足行业内所有非标定制的需求。检测设备100余台，成立有独立实验室，确保每一批物料的精准化。</p>
+                    </div>
+                </div>
+
+                <div class="milestones">
+                    <h2>发展历程</h2>
+                    <div class="milestone">
+                        <div class="year">2003年</div>
+                        <div class="description">
+                            <p>公司成立，开始专注于磁性材料的研发与生产。</p>
+                        </div>
+                    </div>
+                    <div class="milestone">
+                        <div class="year">2015年</div>
+                        <div class="description">
+                            <p>以招商引资方式落地于壶关经济开发区，扩大生产规模。</p>
+                        </div>
+                    </div>
+                    <div class="milestone">
+                        <div class="year">2021年</div>
+                        <div class="description">
+                            <p>公司规划进一步延伸产业链，开始生产纳米晶铁芯、互感器、电路板、控制器，共模电感铁芯等高端磁材系列产品。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', function() {
+            const hero = document.querySelector('.hero');
+            const img = new Image();
+            img.src = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1700101135916-J1NvTX09OLsPNwjg31IjFG2zwBBFAi.png';
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                hero.style.backgroundImage = `url('${img.src}')`;
+            };
+            img.onerror = function() {
+                console.error('背景图片加载失败');
+                hero.style.backgroundColor = '#0c4a6e';
+            };
+        });
+    </script>
+</body>
+</html>

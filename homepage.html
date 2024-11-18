@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鑫磁科技</title>
+    <link rel="stylesheet" href="homepage.css">
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7d1796d873b15a598799efb5bd8be3c.jpg-Fv3r6ZGUYhihVqmxT2v3SSBReCYYDm.jpeg" alt="鑫磁科技 Logo">
+                <div>
+                    <span class="logo-text">鑫磁科技</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="products.html">产品展示</a>
+                <a href="#">服务</a>
+                <a href="#">新闻</a>
+                <a href="contact.html">联系我们</a>
+            </div>
+            <div class="right-section">
+                <button class="btn btn-primary">免费咨询</button>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>磁力科技<br>引领未来</h1>
+                <p>为企业提供先进的磁力解决方案</p>
+            </div>
+            <div class="bottom-bar">
+                <div class="container bottom-bar-content">
+                    <div class="contact-info">
+                        <div class="contact-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>立即联系我们</p>
+                            <a href="mailto:info@xinci.com">info@xinci.com</a>
+                        </div>
+                    </div>
+                    <div class="page-indicators">
+                        <span>01</span>
+                        <span>02</span>
+                        <span>03</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            alert('移动端菜单功能已点击，等待进一步实现');
+        });
+
+        window.addEventListener('load', function() {
+            const hero = document.querySelector('.hero');
+            const img = new Image();
+            img.src = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b3ef2268ed529ac78f1173c21914047.jpg-21RbXk2vMQjxnQGy124kLhh3Jnz7xN.jpeg';
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                hero.style.backgroundImage = `url('${img.src}')`;
+            };
+            img.onerror = function() {
+                console.error('背景图片加载失败');
+                hero.style.backgroundColor = '#0c4a6e';
+            };
+        });
+    </script>
+</body>
+</html>

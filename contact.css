@@ -1,0 +1,180 @@
+ /* 定义CSS变量，方便统一管理颜色等重复使用的值 */
+ :root {
+    --primary-color: #0070f3;
+    --primary-color-hover: #0056b3;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --white-color: #fff;
+}
+
+/* 页面整体的基础样式设置，包括边距、字体、行高、颜色、背景色等 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* 页面主要内容的容器样式，设置宽度、最大宽度、水平居中以及内边距等 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部相关样式，包括背景色、阴影、固定定位等属性 */
+header {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 导航栏样式，使用flex布局进行内部元素的排列 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* logo样式，包含图片与文字的组合展示以及相关文本样式 */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* 导航链接样式，设置间距、文本样式以及鼠标悬停效果 */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* 页面主体内容的通用内边距设置 */
+main {
+    padding: 2rem 0;
+}
+
+/* 一级标题样式，设置居中对齐和底部外边距 */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 联系我们页面的网格布局样式，划分两列并设置间距 */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* 联系表单和联系信息的通用样式，如背景色、内边距、边框圆角和阴影等 */
+.contact-form,
+.contact-info {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 表单组的样式，设置底部外边距 */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* 表单标签样式，设置为块级元素并设置底部外边距 */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* 输入框和文本域的通用样式，设置宽度、内边距、边框等 */
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* 按钮样式，包括背景色、文本颜色、边框、内边距、边框圆角以及鼠标悬停效果 */
+button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* 联系信息段落样式，设置底部外边距 */
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+/* 联系信息中svg图标样式，设置宽度、高度、右边距以及垂直对齐方式 */
+.contact-info svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* 页面底部样式，设置背景色、文本颜色、对齐方式以及内边距等 */
+footer {
+    background-color: var(--text-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* 针对中等屏幕尺寸（如平板电脑）的响应式调整，例如可以适当调整导航栏布局、元素间距等 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-links {
+        gap: 15px;
+    }
+  .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* 原有的小屏幕响应式样式，当屏幕宽度小于768px时，联系我们页面的网格布局变为单列，导航链接隐藏 */
+@media (max-width: 768px) {
+  .contact-grid {
+        grid-template-columns: 1fr;
+    }
+  .nav-links {
+        display: none;
+    }
+}

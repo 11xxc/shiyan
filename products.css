@@ -1,0 +1,168 @@
+/* 全局样式设置，将html和body元素的外边距和内边距都设为0，
+指定字体为Arial或无衬线字体，并设置背景颜色为浅灰色 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* 页面头部样式设置，背景为白色，添加阴影效果，使其固定在页面顶部，
+并设置较高的层级，避免被其他元素覆盖 */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* 容器样式，设置最大宽度为1200px，水平居中，并且左右内边距为20px，
+用于包裹页面内的主要内容，使其在不同屏幕宽度下布局更合理 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏样式，使用flex布局，使其内部元素在水平方向两端对齐，
+垂直方向居中对齐，同时设置高度为64px */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+/* logo样式，使用flex布局使其内部元素（图片和文字）在垂直方向居中对齐，
+去除文本的下划线（超链接默认样式），文字颜色设为黑色 */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+/* logo中的图片样式，设置宽度和高度均为32px，并设置右侧外边距为10px，
+使其与旁边的文字有一定间隔 */
+.logo img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+/* logo中的文字样式，设置字体大小为20px，并且加粗显示 */
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 页面标题样式，文本居中对齐，上下内边距分别为40px和0，字体大小为32px，
+文字颜色为深灰色 */
+.page-title {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 32px;
+    color: #333;
+}
+
+/* 产品网格布局样式，使用CSS Grid布局，列的宽度根据容器自动填充，
+最小宽度为300px，每列占一份剩余空间，元素之间间隔为30px，上下内边距分别为20px和60px */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0 60px;
+}
+
+/* 产品卡片样式，背景为白色，设置圆角，超出部分隐藏（比如阴影效果超出的部分），
+添加阴影效果，并且设置鼠标悬停时的过渡效果，用于变换和阴影变化的动画过渡 */
+.product-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 产品卡片鼠标悬停时的样式，向上移动5px，并且阴影效果增强，
+营造出一种悬浮的视觉效果 */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 产品图片样式，宽度占满父元素，高度为250px，图片按照等比例缩放填充（保持宽高比），
+背景颜色为浅灰色，并且设置内边距为20px（图片内容在内部有一定留白） */
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 产品信息部分的样式，内边距为20px，用于包裹产品的标题、描述、特性等内容 */
+.product-info {
+    padding: 20px;
+}
+
+/* 产品标题样式，字体大小为18px，加粗显示，底部外边距为10px，文字颜色为深灰色 */
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 产品描述样式，文字颜色为中灰色，字体大小为14px，行高为1.5倍字体大小，
+底部外边距为15px */
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* 产品特性列表样式，去除默认的列表样式（如圆点等），内外边距都设为0 */
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 产品特性列表中的每一项样式，底部外边距为5px，左侧内边距为20px，
+用于给前面的自定义列表符号留出空间 */
+.product-features li {
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* 为产品特性列表中的每一项自定义列表符号样式，使用伪元素在每项前面添加一个圆点，
+颜色为蓝色 */
+.product-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0070f3;
+}
+
+/* 媒体查询，当屏幕宽度小于等于768px时生效，用于响应式布局调整。
+产品网格布局的列最小宽度变为250px，元素间隔变为20px，上下内边距调整为15px；
+页面标题字体大小变为24px，上下内边距调整为30px和0，以适应较小屏幕的显示效果 */
+@media (max-width: 768px) {
+   .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+    
+   .page-title {
+        font-size: 24px;
+        padding: 30px 0;
+    }
+}
